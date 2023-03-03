@@ -14,6 +14,4 @@ app.use((req, res, next) => {
     res.send({"key1": "value1"});
 })
 
-const server = http.createServer(app);
-
-server.listen(3000);
+app.listen(3000);
