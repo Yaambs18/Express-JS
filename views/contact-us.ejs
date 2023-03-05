@@ -1,0 +1,33 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/product.css"> 
+    <link rel="stylesheet" href="/css/contactUs.css">
+</head>
+
+<body>
+    <%- include('includes/navigation.ejs') %>
+
+    <main>
+        <form class="contactus-form" action="/contactUs/success" method="post">
+            <div class="form-control">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-control">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-control">
+                <label for="phone">Phone:</label>
+                <input type="tel" maxlength="10" minlength="10" name="phone" id="phone" required>
+            </div>
+            <div class="form-control">
+                <label for="callTime">Time to Call:</label>
+                <input type="date" name="date" id="callTime" min="2023-02-15" required>
+                <input type="time" name="time" id="callTime" required>
+            </div>
+            <div class="form-control">
+                <button type="submit">Get a Call</button>
+            </div>
+        </form>
+    </main>
+<%- include('includes/end.ejs') %>
