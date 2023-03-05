@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/contactUs.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item"><a href="/shop">Shop</a></li>
+                <li class="main-header__item"><a href="/admin/add-product">Add Product</a></li>
+                <li class="main-header__item"><a class="active" href="/contactUs">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form class="contactus-form" action="/contactUs/success" method="post">
+            <div class="form-control">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-control">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-control">
+                <label for="phone">Phone:</label>
+                <input type="tel" maxlength="10" minlength="10" name="phone" id="phone" required>
+            </div>
+            <div class="form-control">
+                <label for="callTime">Time to Call:</label>
+                <input type="date" name="date" id="callTime" min="2023-02-15" required>
+                <input type="time" name="time" id="callTime" required>
+            </div>
+            <div class="form-control">
+                <button type="submit">Get a Call</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
